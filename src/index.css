@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  max-width: 100%;
+  width: 450px;
+  margin: 50px 5px;
+  /* margin: auto auto; */
+  background: #fff;
+  padding: 20px;
+  border: 2px solid teal;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: teal;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bold {
+  background: #000000;
+  padding: 10px 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.bold:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 468px) {
+  .content {
+    width: 350px;
+  }
+}
+
+.Tasks {
+}
+
+.Task {
+  background: #f4f4f4;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Task h1 {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.Task p {
+  font-size: 0.8rem;
+  color: teal;
+  margin: 5px;
+}
+
+.Task i {
+  font-size: 25px;
+  color: teal;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.active {
+  border-left: 3px solid teal;
+}
+
+.container {
+  margin: 15px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  font-size: 1rem;
+  color: teal;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}
