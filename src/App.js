@@ -26,6 +26,8 @@ function App() {
     },
   ]);
 
+  const [showAddTask, setShowAddTask] = useState(false);
+
   const handleDelete = (id) => {
     const newTasks = tasks.filter((task) => task.id !== id);
     setTasks(newTasks);
@@ -48,8 +50,8 @@ function App() {
 
   return (
     <div className="content">
-      <Header />
-      <AddTasks onAddTask={handleAddTask} />
+      <Header setShowAddTask={setShowAddTask} showAddTask={showAddTask} />
+      {showAddTask && <AddTasks onAddTask={handleAddTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={handleDelete} onClick={handleOnclick} />
       ) : (

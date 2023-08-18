@@ -23,7 +23,7 @@ body {
   background: #fff;
   padding: 20px;
   border: 2px solid teal;
-  border-radius: 5px;
+  border-radius: 1rem 0 1rem;
 }
 
 header {
@@ -61,9 +61,6 @@ header {
   .content {
     width: 350px;
   }
-}
-
-.Tasks {
 }
 
 .Task {
@@ -107,6 +104,22 @@ form {
   gap: 1rem;
 }
 
+form .form__control:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+form .form__control:nth-child(3) input {
+  margin-right: 250px;
+}
+
+@media (max-width: 568px) {
+  form .form__control:nth-child(3) input {
+    margin-right: 50px;
+  }
+}
 .form__control {
   display: flex;
   flex-direction: column;
